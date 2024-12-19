@@ -1,0 +1,1264 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: #EEE6D1;
+}
+.header {
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;  
+    position: relative;  
+    width: 100%;  
+    height: 100vh;  
+    line-height: 8rem;
+    background-color: #4B2D14;
+    color: #fff;
+    overflow: hidden;
+}
+.header img{
+    width: 200px;
+    height: 200px;
+}
+.lt, .rb, .rt, .lb, .atas, .bawah{
+    animation: zoomOut 2s ease-out;
+}
+.kiri, .kanan{
+    animation: zoomOut1 2s ease-out;
+}
+@keyframes zoomOut1 {
+    0% {
+        transform: rotate(90deg) scale(0.5); 
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(90deg) scale(1); 
+        opacity: 1;
+    }
+}
+.lt{
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+.lb{
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+}
+.rt{
+    position: absolute;
+    right: -100px;
+    top: -100px;
+}
+.rb{
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+}
+.kanan{
+    position: absolute;
+    right: -100px;
+    transform: rotate(90deg);
+}
+.kiri{
+    position: absolute;
+    left: -100px;
+    transform: rotate(90deg);
+}
+.atas{
+    position: absolute;
+    top: -100px;
+}
+.bawah{
+    position: absolute;
+    bottom: -100px;
+}
+.nama-tamu{
+    margin-top: 15px;
+    line-height: normal;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.5625rem;
+}
+@keyframes zoomOut {
+    0% {
+        transform: scale(0.5); 
+        opacity: 0; 
+    }
+    100% {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+.judul, .judul2 {
+    animation: zoomOut 1.5s ease-out; 
+    text-align: center;  
+    margin: 0;  
+}
+
+.judul2 {
+    font-size: 1.5625rem;  
+    font-family: "Montserrat";
+    margin-bottom: 10px;  
+}
+
+.judul { 
+    font-size: 8.125rem; 
+    font-family: "Great Vibes";
+}
+.pelapis-isi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.isi{
+    border-radius: 20px;
+    padding: 10px 10px 30px 10px;
+    margin-top: 60px;
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: #BD9A71;
+    color: #fff;
+    width: 75%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+.isi.animated{
+    opacity: 1;
+    animation: balik 3s ease-in-out;
+}
+@keyframes tengah{
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+.hidden1{
+    opacity: 0;
+}
+.visible1{
+    animation: tengah 2s ease-out forwards;
+}
+.salam{
+    font-family: "Sail";
+    font-size: 2.1875rem;
+}
+.font-biasa{
+    font-size: 1.25rem;
+    font-family: "Montserrat";
+    color: #fff;
+}
+#font-kecil{
+    font-size: 18px;
+}
+.gambar-pasangan{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4rem;
+    opacity: 0;
+}
+@keyframes naik {
+    0% {
+        opacity: 0;
+        transform: translateY(200px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.laki, .perempuan{
+    padding-top: 25px;
+    background-color: #fff;
+    width: 38%;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.visible2{
+    animation: naik 1.5s ease-out forwards;
+}
+.foto{
+    width: 60%;
+    height: 65%;
+    background-color: none;
+    border: double 10px #F98110;
+    border-radius: 50%/30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+}
+#lb2 , #rb2 , #lt2 , #rt2, #lb3, #rb3, #lt3, #rt3{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: inherit;
+    opacity: 0;
+}
+#lb2, #lb3{
+    left: 0;
+    bottom: 0;
+    transform: rotate(90deg);
+}
+#rb2, #rb3{
+    right: 0;
+    bottom: 0;
+}
+#lt2, #lt3{
+    left: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+#rt2, #rt3{
+    right: 0;
+    top: 0;
+    transform: rotate(270deg);
+}
+@keyframes lb2{
+    0%{
+        transform: rotate(90deg) scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(90deg) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes rb2{
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes lt2{
+    0%{
+        transform: rotate(180deg) scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(180deg) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes rt2{
+    0%{
+        transform: rotate(270deg) scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(270deg) scale(1);
+        opacity: 1;
+    }
+}
+.visible11{
+    animation: lb2 2s ease-out forwards;
+}
+.visible12{
+    animation: rb2 2s ease-out forwards;
+}
+.visible13{
+    animation: lt2 2s ease-out forwards;
+}
+.visible14{
+    animation: rt2 2s ease-out forwards;
+}
+.foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.nama-pasangan{
+    color: #312F2D;
+    font-family: "Great Vibes";
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.waktu-tempat{
+    margin-top: 100px;
+    width: 75%;
+    height: auto;
+    padding: 10px 10px 30px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+}
+.akad{
+    background-color: #96664D;
+    width: 45%;
+    height: 550px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid #CFBA9D;
+    opacity: 0;
+}
+.resepsi{
+    background-color: #96664D;
+    width: 45%;
+    height: 550px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid #CFBA9D;
+    opacity: 0;
+}
+.pelapis-tgl-wkt{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.waktu, .tempat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-tgl, .icon-wkt{
+    background-color: #bbdefb;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    border: 2px solid #000;
+}
+.icon-tgl img, .icon-wkt img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+@keyframes akad-kanan{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes resepsi-kiri{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.visible3{
+    animation: akad-kanan 1.5s forwards;
+}
+.visible4{
+    animation: resepsi-kiri 1.5s forwards;
+}
+.ikon-akad{
+    width: 40%;
+    height: 30%;
+    border-radius: 100%;
+    margin-bottom: 25px;
+}
+.ikon-akad img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    border: 2px solid #000;
+    background-color: #f5f5dc;
+}
+.ikon-resepsi{
+    width: 40%;
+    height: 30%;
+    border-radius: 100%;
+    margin-bottom: 25px;
+}
+.ikon-resepsi img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    border: 2px solid #000;
+    background-color: #dcb6b6;
+}
+.akad p{
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.resepsi p{
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.no-underline{
+    text-decoration: none;
+    color: inherit;
+}
+#tampilan1 a, #tampilan2 a, #tampilan3 a, #tampilan4 a, #tampilan5 a, #tampilan6 a, #tampilan7 a{
+    text-decoration: none;
+    color: inherit;
+}
+.button{
+    color: #fff;
+    font-family: "Montserrat";
+    border: 2px solid #000;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    margin-top: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    gap: 2.5rem;
+}  
+.button img{
+    width: 50px;
+    height: 50px;
+}
+.button p{
+    font-size: 18px;
+}
+.button:hover{
+    background-color: #EEE6D1;
+    transform: scale(1.1);
+}
+.ukuran-biasa{
+    font-size: 0.05rem;
+}
+.galeri{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.galeri-item{
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.3s ease;
+}
+.galeri-item img{
+    width: 380px;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.galeri:hover .galeri-item:not(:hover){
+    filter: grayscale(1) blur(10px);
+}
+.galeri-item img:hover{
+    transform: scale(1.1);
+}
+.pelapisVid{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.vid{
+    margin-top: 50px;
+    padding: 15px;
+    width: 500px;
+    height: 300px;
+    background-color: #333;
+    border: 10px solid #000;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    
+}
+.vid video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+@keyframes turun{
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.tamuKhusus{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tamuKhusus table{
+    font-family: "Montserrat";
+    border-radius: 15px;
+    padding: 5px;
+    border-spacing: 10px;
+    background-color: #7C6245;
+}
+
+.tamuKhusus table tr td{
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #BD9A71;
+    border: 2px solid #EEE6D1;
+}
+
+.hidden5, .hidden6, .hidden7, .hidden8, .hidden9, .hidden10{
+    opacity: 0;
+}
+.visible5, .visible8{
+    animation: akad-kanan 1.5s forwards;
+}
+.visible6{
+    animation: turun 1.5s forwards;
+}
+.visible7, .visible10{
+    animation: resepsi-kiri 1.5s forwards;
+}
+.visible9{
+    animation: naik 1.5s forwards;
+}
+.nama-ortu{
+    font-family: "Montserrat";
+    color: #312F2D;
+    font-size: 1.35rem;
+    margin-top: 15px;
+}
+.sosmed{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 80%;
+    height: 15%;
+}
+.icon-sosmed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 100%;
+}
+.icon-sosmed img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.container-quotes{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.quotes{
+    border-radius: 20px;
+    width: 80vw;
+    text-align: center;
+    color: #fff;
+    background-color: #CFBA9D;
+}
+.quotes p{
+    font-family: "Montserrat";
+    font-size: 20px;
+
+}
+.quotes p span{
+    font-family: "Great Vibes";
+    font-size: 26px;
+}
+.akhir{
+    margin-top: 130px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #4B2D14;
+}
+.akhir p{
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Montserrat";
+    color: #fff;
+}
+.akhir button{
+    width: 140px;
+    height: 50px;
+    border-radius: 25px;
+}
+#kehadiran{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    background-color: #BD9A71;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Montserrat";
+    width: 30%;
+    height: auto;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+}
+.menuMakanan{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.menu{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) 1fr ;
+}
+.menuItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+@keyframes kehadiran{
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.visible15{
+    animation: kehadiran 1.5s ease-out forwards;
+}
+.input{
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #000;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Montserrat";
+    text-transform: capitalize;
+}
+.check{
+    color: #fff;
+    font-family: "Montserrat";
+}
+#reason, #pesan{
+    padding: 10px;
+    font-family: "Montserrat";
+    width: 85%;
+    height: 200px;
+    border-radius: 15px;
+    font-size: 14px;
+    resize: none;
+}
+#error{
+    color: red;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+#hadiah{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    width: 40%;
+    height: auto;
+    background-color: #BD9A71;
+    font-family: "Montserrat";
+    gap: 15px;
+    opacity: 0;
+}
+
+.metode{
+    color: #fff;
+    font-family: "Montserrat";
+}
+
+.dana{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gambar-qr{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.gambar-qr img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.noRek-button{
+    display: flex;
+    gap: 10px;
+}
+
+.copyNodana{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#copy{
+    border-radius: 0px;
+    width: 80px;
+    height: 30px; 
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#copy img{
+    width: 40%;
+    height: 100%;
+}
+
+@keyframes hadiah{
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.visible16{
+    animation: hadiah 1.5s ease-out forwards;
+}
+.rekening{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+.konfirmasi{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#konfirmasiPesan{
+    color: red;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+.none{
+    display: none !important;
+}
+#button2{
+    margin-top: 20px;
+}
+#kotakmusik{
+    position: fixed;
+    left: 2%;
+    right: 68%;
+    bottom: 100px;
+}
+#kontrolmusik{
+    width: 100px;
+    height: 100px;
+    animation: animasimusik 2s linear infinite ;
+    display: none;
+}
+#kontrolmusik img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes animasimusik{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.navigasi{
+    background-color: #BA8470;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 18px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    visibility: hidden;
+}
+.animasinavigasi{
+    animation: navigasi 1.5s;
+}
+@keyframes navigasi{
+    0%{
+        transform: translateY(200px) scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+.navigasi p{
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+.navigasi p:hover{
+    transform: scale(1.1);
+    background-color: #EFE5D0;
+}
+.story{
+    width: 100%;
+    height: auto;
+}
+.part1, .part2, .part3, .part4, .part5{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    background-color: #BD9A71;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Montserrat";
+}
+.part1{
+    position: relative;
+    left: 22.5%;
+    opacity: 0;
+}
+.part2{
+    position: relative;
+    left: 52.5%;
+    opacity: 0;
+}
+.part3{
+    position: relative;
+    left: 22.5%;
+    opacity: 0;
+}
+.part4{
+    position: relative;
+    left: 52.5%;
+    opacity: 0;
+}
+.part5{
+    position: relative;
+    left: 22.5%;
+    opacity: 0;
+}
+.gambar-story{
+    margin-top: 10px;
+    width: 80%;
+    height: 150px;
+    border-radius: 5px;
+}
+.gambar-story img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+@keyframes mengecil{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+@-webkit-keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes roll-in-blurred-right {
+    0% {
+      -webkit-transform: translateX(1000px) rotate(720deg);
+              transform: translateX(1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-right {
+    0% {
+      -webkit-transform: translateX(1000px) rotate(-720deg);
+              transform: translateX(1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+.visible17{
+    -webkit-animation: roll-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: roll-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.visible18{
+    -webkit-animation: roll-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: roll-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.visible19{
+    animation: mengecil 1s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+@media only screen and (max-width: 768px) { 
+    .header{
+        line-height: 4rem;
+    }
+    .judul{
+        font-size: 2.5rem;
+    }
+    .judul2{
+        font-size: 1rem;
+    }
+    .nama-tamu > p{
+        font-size: 1rem;
+    }
+
+    .header > img{
+        width: 100px;
+        height: 100px;
+    }
+    .lt{
+        left: -50px;
+        top: -50px;
+    }
+    .rt{
+        right: -50px;
+        top: -50px;
+    }
+    .lb{
+        left: -50px;
+        bottom: -50px;
+    }
+    .rb{
+        right: -50px;
+        bottom: -50px;
+    }
+    .atas{
+        top: -50px;
+    }
+    .bawah{
+        bottom: -50px;
+    }
+    .kanan{
+        right: -50px;
+    }
+    .kiri{
+        left: -50px;
+    }
+    .gambar-pasangan {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .gambar-pasangan > div {
+        margin-bottom: 20px; 
+    }
+    .gambar-pasangan > .laki, .perempuan{
+        width: 80%;
+    }
+    .foto{
+        height: 50%;
+    }
+    .gambar-pasangan > .laki > .nama-pasangan,.nama-ortu, .perempuan > .nama-pasangan,.nama-ortu{
+        font-size: 20px;
+    }
+    .waktu-tempat{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .akad, .resepsi{
+        padding: 20px;
+        width: 85%;
+        height: auto;
+    }
+    .akad > p, .resepsi > p{
+        font-size: 1.25rem;
+    }
+    .akad > .ikon-akad , .resepsi > .ikon-resepsi{
+        width: 100px;
+        height: 100px;
+    }
+    .button img{
+        width: 35px;
+        height: 35px;
+    }
+    .button p{
+        font-size: 14px;
+    }
+    .pelapis-tgl-wkt{
+        flex-direction: column;
+    }
+    .galeri{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .galeri-item img{
+        width: 200px;
+        height: 200px;
+    }
+    .visible5 , .visible7 , .visible9{
+        animation: akad-kanan 1.5s forwards;
+    }
+    .visible6 , .visible8 , .visible10{
+        animation: resepsi-kiri 1.5s forwards;
+    }
+    #lb2 , #rb2 , #lt2 , #rt2, #lb3, #rb3, #lt3, #rt3{
+        width: 85px;
+        height: 85px;
+    }
+    #kehadiran{
+        width: 90%;
+    }
+    #hadiah{
+        width: 80%;
+    }
+    .navigasi{
+        left: 20%;
+        right: 20%;
+        font-size: 12px;
+        flex-wrap: wrap;
+        
+    }
+    .story{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+    .part1 , .part2 , .part3 , .part4 , .part5{
+        left: 0;
+    }
+    .vid{
+        width: 80%;
+        height: 200px;
+    }
+    .tamuKhusus{
+        width: 100%;
+    }
+    .tamuKhusus table{
+        width: 80%;
+    }
+    .rekening{
+        line-height: 1.5;
+    }
+    .noRek-button{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .judul{
+        font-size: 6rem;
+    }
+    .judul2{
+        font-size: 2.5rem;
+    }
+    .nama-tamu > p{
+        font-size: 2rem;
+    }
+    #bukaUndangan{
+        width: 150px;
+        height: 50px;
+        border-radius: 15px;
+        border: 2px #f5f5dc;
+    }
+    .quotes{
+        width: 90%;
+    }
+    .quotes > p{
+        font-size: 36px;
+    }
+    .quotes > p > span{
+        font-size: 30px;
+    }
+    .isi{
+        width: 90%;
+    }
+    .laki{
+        width: 45%;
+    }
+    .perempuan{
+        width: 45%;
+    }
+    .nama-pasangan{
+        font-size: 40px;
+    }
+    .akad, .resepsi{
+        padding: 10px;
+        width: 40%;
+    }
+    
+    #font-kecil{
+        font-size: 14px;
+    }
+    .galeri{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .waktu-tempat{
+        width: 100%;
+    }
+    .navigasi{
+        left: 5%;
+        right: 5%;
+    }
+    .story{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+    .part1, .part2, .part3, .part4, .part5{
+        left: 0;
+    }
+    .vid{
+        width: 90%;
+        height: 400px;
+    }
+    .tamuKhusus > table{
+        width: 90%;
+    }
+    .akhir > p{
+        font-size: 26px;
+    }
+    #button2, #button3{
+        width: 200px;
+        height: 50px;
+    }
+    #kehadiran{
+        width: 75%;
+    }
+    #hadiah{
+        width: 75%;
+    }
+}
